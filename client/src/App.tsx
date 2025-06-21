@@ -1,13 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+
+import TestComponent from '../src/Features/Common/TestComponent.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
+  console.log('Base URL:', baseUrl);
 
   return (
     <>
+      <TestComponent />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
